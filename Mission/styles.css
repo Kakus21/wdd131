@@ -1,0 +1,47 @@
+body {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .content {
+    max-width: 600px;
+    padding: 20px;
+    margin: 40px auto;
+  }
+  
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    font-weight: 525;
+    font-size: 2em;
+  }
+  
+  h2 {
+    color: #006EB6;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 300;
+  }
+  
+  p {
+    text-align: left;
+    margin-bottom: 15px;
+  }
+  
+  .logo {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto;
+  }
+  

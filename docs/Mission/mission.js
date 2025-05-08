@@ -1,6 +1,6 @@
 const themeSelector = document.getElementById("theme-selector");
 const body = document.body;
-const logo = document.querySelector(".logo");
+const logo = document.querySelector(".byui-logo");
 
 function changeTheme() {
     const selectedTheme = themeSelector.value;
@@ -14,4 +14,4 @@ function changeTheme() {
     }
 }
 
-themeSelector.addEventListener('change', changeTheme);
+themeSelector.addEventListener("change", changeTheme);

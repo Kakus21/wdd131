@@ -1,76 +1,80 @@
 body {
-    font-family: "Times New Roman", Times, serif;
-    font-size: 20px;
-    line-height: 1.5;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .content {
-    max-width: 600px;
-    padding: 20px;
-    margin: 40px auto;
-  }
-  
-  h1 {
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-    font-weight: 525;
-    font-size: 2em;
-  }
-  
-  h2 {
-    color: #006EB6;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-    font-size: 18px;
-    font-weight: 300;
-  }
-  
-  p {
-    text-align: left;
-    margin-bottom: 15px;
-  }
-  
-  .logo {
-    width: 150px;
-    height: auto;
-    display: block;
-    margin: 0 auto 20px auto;
-  }
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
 
-   
-  body.dark {
-    background-color: #333;
-    color: white;
-  }
-  
-  body.dark h2 {
-    color: #A0D4ED;
-    }
-  body.dark h1,
-  body.dark p,
-  body.dark li,
-  body.dark label {
-    color: white;
-  }
+.content {
+  max-width: 600px;
+  padding: 20px;
+  margin: 40px auto;
+}
 
-  body.dark select {
-    background-color: #555;
-    color: white;
-    border: 1px solid #888;
-  }
-  
-  #theme-selector {
-    width: auto;
-    max-width: 200px;
-    max-height: 30px;
-    padding: 5px;
-    font-size: 1rem;
-  }
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  font-weight: 525;
+  font-size: 2em;
+}
+
+h2 {
+  color: #006EB6;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+p {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+li {
+  margin-bottom: 20px;
+}
+
+.byui-logo {
+  width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+body.dark {
+  background-color: #333;
+  color: white;
+}
+
+body.dark h2 {
+  color: #A0D4ED;
+}
+
+body.dark h1,
+body.dark p,
+body.dark li,
+body.dark label {
+  color: white;
+}
+
+body.dark select {
+  background-color: #555;
+  color: white;
+  border: 1px solid #888;
+}
+
+#theme-selector {
+  width: auto;
+  max-width: 200px;
+  max-height: 30px;
+  padding: 5px;
+  font-size: 1rem;
+}

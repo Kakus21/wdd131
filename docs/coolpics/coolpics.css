@@ -61,7 +61,7 @@ nav {
   text-align: center;
 }
 
-#menu-button {
+.menu-button {
   background: none;
   border: none;
   padding: 0;
@@ -73,35 +73,27 @@ nav {
   margin: 0 auto;
 }
 
-#nav-menu {
-  display: none;
-}
-
-#nav-menu.open {
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-nav li {
+.menu li {
   margin: 0.5em 0;
 }
 
-nav a {
+.menu a {
   display: inline-block;
-  padding-bottom: 0;
   border-bottom: 2px solid transparent;
   transition: border-color 0.3s ease;
 }
 
-nav a:hover,
-nav a:focus {
+.menu a:hover,
+.menu a:focus {
   border-color: var(--accent-color);
 }
 
@@ -127,6 +119,26 @@ img {
   box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.6);
 }
 
+.hide {
+  display: none;
+}
+
+@media screen and (min-width: 1000px) {
+  .menu-button {
+    display: none;
+  }
+
+  .menu {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .menu li {
+    margin: 0 3em;
+  }
+}
+
 @media screen and (min-width: 700px) {
   .gallery {
     grid-template-columns: 1fr 1fr;
@@ -134,31 +146,64 @@ img {
 }
 
 @media screen and (min-width: 1000px) {
-  #menu-button {
-    display: none;
-  }
-
-  #nav-menu {
-    display: flex !important;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-  }
-
-  nav ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-  }
-
-  nav li {
-    margin: 0 3em;
-  }
-
   .gallery {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+dialog#viewer {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+  z-index: 9999;
+}
+
+#viewer img {
+  display: block;
+  width: 90%;
+  max-height: 100%;
+  margin: 20vh auto 0 auto;
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.7);
+}
+
+dialog::backdrop {
+  background-color: transparent;
+}
+
+
+.modal-wrapper {
+  position: relative;
+  width: fit-content;
+  margin: 20vh auto 0 auto; 
+}
+
+.modal-wrapper img {
+  display: block;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.close-viewer {
+  position: absolute;
+  top: -1.5em;    
+  right: -1em;
+  font-size: 1.5rem;
+  background: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+  padding: 0.25em 0.5em;
+  border-radius: 0; 
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }

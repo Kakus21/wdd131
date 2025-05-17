@@ -52,3 +52,5 @@ viewer.addEventListener("click", (event) => {
     viewer.close();
   }
 });
+
+//May need adjustments still

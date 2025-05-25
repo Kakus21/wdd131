@@ -28,7 +28,7 @@ function handleImageClick(event) {
   const src = clickedImage.getAttribute("src");
   const alt = clickedImage.getAttribute("alt");
 
-  const fullSrc = src.split("-")[0] + "-full.jpeg";
+  const fullSrc = clickedImage.dataset.full || src;
 
   viewer.innerHTML = `
     <div class="modal-wrapper">
@@ -52,5 +52,3 @@ viewer.addEventListener("click", (event) => {
     viewer.close();
   }
 });
-
-//May need adjustments still

@@ -162,41 +162,45 @@ dialog#viewer {
   inset: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.6);
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
   border: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  box-sizing: border-box;
+  display: none; /* Hidden by default */
+}
+
+dialog#viewer[open] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0;
   margin: 0;
-  border: none;
-  z-index: 9999;
 }
-
-#viewer img {
-  display: block;
-  width: 90%;
-  max-height: 100%;
-  margin: 20vh auto 0 auto;
-  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.7);
-}
-
-dialog::backdrop {
-  background-color: transparent;
-}
-
 
 .modal-wrapper {
   position: relative;
-  width: fit-content;
-  margin: 20vh auto 0 auto; 
+  max-width: 90vw;
+  max-height: 90vh;
+  margin: 0;
 }
 
 .modal-wrapper img {
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  max-height: 70vh;
+  object-fit: contain;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
   display: block;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
 
 .close-viewer {
   position: absolute;
-  top: -1.5em;    
+  top: -1.5em;
   right: -1em;
   font-size: 1.5rem;
   background: white;
@@ -204,8 +208,6 @@ dialog::backdrop {
   border: none;
   cursor: pointer;
   padding: 0.25em 0.5em;
-  border-radius: 0; 
+  border-radius: 0;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
-
-/*May need adjusting still*/

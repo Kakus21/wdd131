@@ -21,6 +21,15 @@ window.addEventListener("resize", handleResize);
 const viewer = document.getElementById("viewer");
 const gallery = document.querySelector(".gallery");
 
+function viewerTemplate(src, alt) {
+  return `
+    <div class="modal-wrapper">
+      <img src="${src}" alt="${alt}">
+      <button class="close-viewer">X</button>
+    </div>
+  `;
+}
+
 function handleImageClick(event) {
   const clickedImage = event.target.closest("img");
   if (!clickedImage) return;
@@ -28,15 +37,9 @@ function handleImageClick(event) {
   const src = clickedImage.getAttribute("src");
   const alt = clickedImage.getAttribute("alt");
 
-  const fullSrc = clickedImage.dataset.full || src;
+  const fullSrc = src.split('-')[0] + '-full.jpeg';
 
-  viewer.innerHTML = `
-    <div class="modal-wrapper">
-      <img src="${fullSrc}" alt="${alt}">
-      <button class="close-viewer">X</button>
-    </div>
-  `;
-
+  viewer.innerHTML = viewerTemplate(fullSrc, alt);
   viewer.showModal();
 
   const closeButton = viewer.querySelector(".close-viewer");

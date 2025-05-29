@@ -4,14 +4,6 @@ body {
   line-height: 1.5;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-}
-
-.content {
-  max-width: 600px;
-  padding: 20px;
-  margin: 40px auto;
 }
 
 h1 {
@@ -77,4 +69,20 @@ body.dark select {
   max-height: 30px;
   padding: 5px;
   font-size: 1rem;
+}
+
+
+.content-wrapper {
+    border: 1px solid #ccc;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    margin: 40px auto;
+    max-width: 900px; /* wider than .content */
+    box-sizing: border-box;
+}
+
+.content {
+    max-width: 600px;
+    padding: 20px;
 }

@@ -93,7 +93,7 @@ header {
 /* === Layout for Main Content === */
 .content-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 1fr;
   gap: 2em;
   max-width: 1000px;
   margin: 1em auto 2em;
@@ -110,30 +110,41 @@ header {
 /* === Internal Layout of Each Review === */
 .review-grid {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 220px 1fr;
   gap: 0.5rem;
-  position: relative;
+  align-items: stretch;
 }
 
 .review-meta {
   text-align: right;
-  padding-right: 1rem;
-  padding-top: 1rem;
-  /*border-right: 2px solid var(--color-gold);*/
+  padding: 1rem;
+  border-right: 2px solid var(--color-gold);
   font-size: 1rem;
   color: var(--color-dark);
 }
 
-.review-meta p {
-  margin: 0.2em 0;
+.review-date {
+  font-size: 1.2rem;
 }
 
+.review-meta p {
+  margin: 0.1em 0;
+  line-height: 1.5;
+}
+
+.review-body {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-left: 0.5rem;
+}
 
 .review-body img {
-  max-width: 100%;
-  height: auto;
   display: block;
-  margin: 0 auto;
+  margin: 1em auto;
+}
+
+.review-body h2 {
+  margin-top: 0.5rem;
 }
 
 .read-more {
@@ -181,6 +192,10 @@ footer {
 
   .review-meta {
     text-align: left;
+    border-right: none;
+    border-bottom: 2px solid var(--color-gold);
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
   }
 }
 

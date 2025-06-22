@@ -1,0 +1,272 @@
+/* Import a more accessible font instead of Amatic SC */
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+/* CSS Custom Properties */
+:root {
+  --primary-color: #1B98E0;
+  --secondary-color: #59c3c3;
+  --text-dark: #333;
+  --text-light: #ebebeb;
+  --primary-font: Arial, Helvetica, sans-serif;
+  --secondary-font: 'Shadows Into Light', cursive;
+}
+
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--primary-font);
+  color: var(--text-dark);
+  background-color: #fff;
+  line-height: 1.5;
+  padding: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Header styles */
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.site-title {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.site-title img {
+  width: 6rem;
+  height: 6rem;
+}
+
+.site-title h1 {
+  font-family: var(--secondary-font);
+  font-size: 3rem;
+  color: black;
+}
+
+.content {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Search form */
+.search-form {
+  display: flex;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.search-form input[type="text"] {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  border: 2px solid black;
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+
+.search-form button {
+  background-color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-form button img {
+  width: 20px;
+  height: 20px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.divider {
+  border: none;
+  height: 2px;
+  background-color: #ccc;
+  margin: 2rem 0;
+  width: calc(100% + 4rem); 
+  transform: translateX(-2rem);
+}
+
+/* Recipes layout */
+.recipes {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Recipe card */
+.recipe-card {
+  border: 2px solid black;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 1.5rem;
+}
+
+.tag {
+  display: inline-block;
+  color: black;
+  font-weight: bold;
+  border: 2px solid black;
+  padding: 0.15rem 0.75rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+  margin: 0.5rem 0;
+}
+
+.recipe-card h2 {
+  font-family: var(--secondary-font);
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-top: 0.5rem;
+}
+
+.recipe-card .description {
+  display: none;
+  font-size: 0.9rem;
+  color: black;
+}
+
+.rating {
+  display: inline-block;
+  margin-bottom: 2rem; 
+  letter-spacing: -0.2rem;
+}
+
+.icon-star {
+    font-size: 1.25em;
+}
+
+.icon-star-empty {
+    font-weight: bold;
+    font-size: 1.50em;
+}
+
+/* Footer styles */
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  color: #666;
+}
+
+footer .social {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+footer .social img {
+  width: 65px;
+  height: 65px;
+}
+
+footer a {
+  color: var(--primary-color); 
+  text-decoration: none; 
+}
+
+@media (min-width: 600px) {
+  .content {
+  padding: 0 2rem;
+}
+
+  .recipe-card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .recipe-card img {
+    width: 45%;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+
+  .recipe-card > div {
+    flex: 1;
+  }
+
+  .recipe-card .tag {
+  font-size: 1.2rem;
+  padding: 0.1rem 0.6rem;
+  }
+
+  .recipe-card .rating {
+  margin-bottom: 0;
+  }
+  
+  .recipe-card .description {
+    display: block;
+    padding-top: 0.5em;
+    font-size: 1.1rem;
+    color: black;
+  }
+
+  .recipe-card h2,
+  .recipe-card .tag,
+  .recipe-card .description,
+  .recipe-card .rating {
+    margin-right: 1rem;
+  }
+
+  footer .content {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem; 
+    padding: 0 2rem;
+  }
+
+  footer .social img {
+    width: 40px;
+    height: 40px;
+  }
+
+  footer p {
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+
+}
+

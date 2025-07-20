@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="About Joshua Kakuschke - Top Films author" />
+    <meta name="author" content="Joshua Kakuschke" />
+    <title>About - Top Films</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="films.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="title-container">
+        <img
+          src="images/logo.png"
+          alt="Clapperboard Logo"
+          class="site-logo"
+        />
+        <h1 class="site-title">
+          <span class="title-top">Top</span>
+          <span class="title-bottom">Films</span>
+        </h1>
+      </div>
+      <nav class="site-nav">
+        <div class="nav-wrapper">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" aria-current="page">About</a></li>
+            <li><a href="#">Sign-In</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main" class="about-main">
+      <section id="search-bar">
+        <form
+          action="search-results.html"
+          method="GET"
+          id="film-search-form"
+          class="search-form"
+        >
+          <input
+            type="text"
+            name="q"
+            placeholder="Search films..."
+            aria-label="Search films"
+          />
+          <button type="submit" aria-label="Search">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </section>
+
+      <section class="about-intro">
+        <h2>About Me</h2>
+        <div class="about-content">
+          <img
+            src="images/me.jpg"
+            alt="Portrait of Joshua Kakuschke"
+            class="about-photo"
+          />
+          <p>
+            My name is Joshua Kakuschke. Thank you for checking out my Top Films
+            website. I've always loved film. I enjoy watching movies, experiencing
+            their stories, and falling in love with characters. I hope to create
+            films of my own one day. On this site, I share honest reviews,
+            recommendations, and reflections on films old and new.
+          </p>
+        </div>
+      </section>
+
+      <section class="top-films">
+        <h3>My Top 5 Films</h3>
+        <div class="film-posters">
+          <img
+            src="images/totoro-poster.jpg"
+            alt="Poster of My Neighbor Totoro"
+          />
+          <img
+            src="images/fellowship-of-the-ring-poster.jpg"
+            alt="Poster of The Fellowship of the Ring"
+          />
+          <img
+            src="images/departures-poster.jpg"
+            alt="Poster of Departures"
+          />
+          <img
+            src="images/the-iron-giant-poster.webp"
+            alt="Poster of The Iron Giant"
+          />
+          <img
+            src="images/godzilla-minus-one-poster.jpg"
+            alt="Poster of Godzilla Minus One"
+          />
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Joshua Kakuschke. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

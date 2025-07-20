@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Top Films - View and rate the best movies ever made." />
+    <meta name="author" content="Josh Kakuschke" />
+    <title>Top Films</title>
+    <link rel="stylesheet" href="films.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <script type="module" src="films.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="title-container">
+        <img src="images/logo.png" alt="Clapperboard Logo" class="site-logo" />
+        <h1 class="site-title">
+          <span class="title-top">Top</span>
+          <span class="title-bottom">Films</span>
+        </h1>
+      </div>
+      <nav class="site-nav">
+        <div class="nav-wrapper">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Sign-In</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section id="search-bar">
+        <form
+          action="search-results.html"
+          method="GET"
+          id="film-search-form"
+          class="search-form"
+        >
+          <input
+            type="text"
+            name="q"
+            placeholder="Search films..."
+            aria-label="Search films"
+          />
+          <button type="submit" aria-label="Search">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </section>
+
+      <p class="site-description">
+        Welcome to Top Films! Discover timeless and international films worth watching. Browse 
+        top-rated picks, explore by genre, or find a new favorite by year!
+      </p>
+
+      <section id="featured-film">
+        <h2>Featured Film</h2>
+        <div id="random-film" class="film-card-container"></div>
+      </section>
+
+      <hr class="divider" />
+
+      <section id="top-ten-section">
+        <h2>Top 10 Films</h2>
+        <div id="films-container"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Josh Kakuschke. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
